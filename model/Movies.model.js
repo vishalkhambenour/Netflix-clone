@@ -16,5 +16,4 @@ const moviesSchema = new Schema(
   },
   { timestamps: true }
 );
-
 module.exports = model("Movie", moviesSchema);

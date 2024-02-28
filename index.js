@@ -3,6 +3,7 @@ require('dotenv').config()
 const connectTOMOngo = require('./db/connection')
 const router = require('./routes/netflix.routes');
 const userroutes= require("./routes/user.routes");
+const movierouts=require("./routes/movies.routes")
 const auth = require('./helpers/auth');
 
 
@@ -11,6 +12,7 @@ app.use(express.json())
 
 app.use("/api/netflix",router)
 app.use("/api/users",userroutes)
+app.use("/api/movies",movierouts)
 
 
 app.all("*",(req,res)=>{
